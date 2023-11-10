@@ -467,7 +467,7 @@ function varupdate() {
 
   v1Assign(volt1);
   v2Assign(volt2);
-  let v0 = ((resf*volt1/res1)+(resf*volt2/res2));
+  let v0 = volt1*(resf/(res2+resf)*(1+ (resf/res1)))-((resf/res1)*volt2)
   // v0Assign(v0);
 
   if (isNaN(v0) || !isFinite(v0)) {
