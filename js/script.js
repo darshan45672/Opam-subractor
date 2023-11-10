@@ -2,8 +2,24 @@ var v1 = v2 = r1 = r2 = rf = v0 = 0;
 const canvas = document.getElementById("canvas");
 const ctx = canvas.getContext("2d");
 
-ctx.strokeStyle = "black";
+ctx.strokeStyle = "red";
 ctx.lineWidth = 2;
+
+
+ctx.beginPath();
+ctx.moveTo(540, 235);
+ctx.lineTo(430, 295);
+ctx.stroke();
+
+ctx.beginPath();
+ctx.moveTo(540, 235);
+ctx.lineTo(430, 175);
+ctx.stroke();
+
+ctx.beginPath();
+ctx.moveTo(430, 175);
+ctx.lineTo(430, 295);
+ctx.stroke();
 
 //horizontal
 ctx.beginPath();
@@ -13,7 +29,7 @@ ctx.stroke();
 
 ctx.beginPath();
 ctx.moveTo(540, 235);
-ctx.lineTo(600, 235);
+ctx.lineTo(710, 235);
 ctx.stroke();
 
 ctx.beginPath();
@@ -41,7 +57,7 @@ ctx.moveTo(140, 200);
 ctx.lineTo(180, 200);
 ctx.stroke();
 
-
+ctx.strokeStyle = "black";
 //opamp
 ctx.beginPath();
 ctx.moveTo(540, 235);
@@ -58,6 +74,7 @@ ctx.moveTo(430, 175);
 ctx.lineTo(430, 295);
 ctx.stroke();
 
+ctx.strokeStyle = "red";
 //vertical
 
 ctx.beginPath();
@@ -80,6 +97,7 @@ ctx.moveTo(369, 385);
 ctx.lineTo(369, 425);
 ctx.stroke();
 
+ctx.strokeStyle = "black";
 //resistor1
 
 ctx.beginPath();
@@ -245,19 +263,78 @@ ctx.lineTo(365, 460);
 ctx.stroke();
 
 ctx.beginPath();
-ctx.moveTo(369, 425);
+ctx.moveTo(369, 385);
 ctx.lineTo(369, 450);
 ctx.stroke();
+//ground 2
+
+ctx.beginPath();
+ctx.moveTo(715, 294);
+ctx.lineTo(715, 345);
+ctx.stroke();
+
+ctx.beginPath();  
+ctx.moveTo(700, 345);
+ctx.lineTo(730, 345);
+ctx.stroke();
+      
+ctx.beginPath();
+ctx.moveTo(705, 350);
+ctx.lineTo(725, 350);
+ctx.stroke();
+      
+ctx.beginPath();
+ctx.moveTo(710, 355);
+ctx.lineTo(720, 355);
+ctx.stroke();
+
+
+//dots
+ctx.beginPath();
+ctx.arc(137, 200, 5, 0, 2 * Math.PI);
+ctx.fillStyle = 'black'; 
+ctx.fill();
+
+ctx.beginPath();
+ctx.arc(137, 270, 5, 0, 2 * Math.PI);
+ctx.fillStyle = 'black'; 
+ctx.fill();
+
+ctx.beginPath();
+ctx.arc(369, 270, 5, 0, 2 * Math.PI);
+ctx.fillStyle = 'black'; 
+ctx.fill();
+
+ctx.beginPath();
+ctx.arc(360, 200, 5, 0, 2 * Math.PI);
+ctx.fillStyle = 'black'; 
+ctx.fill();
+
+ctx.beginPath();
+ctx.arc(715, 235, 5, 0, 2 * Math.PI);
+ctx.fillStyle = 'black'; 
+ctx.stroke();
+
+ctx.beginPath();
+ctx.arc(600, 235, 5, 0, 2 * Math.PI);
+ctx.fillStyle = 'black'; 
+ctx.fill();
+
+ctx.beginPath();
+ctx.arc(715, 290, 5, 0, 2 * Math.PI);
+ctx.fillStyle = 'black'; 
+ctx.stroke();
+
 
 // resistor 1 naming
 ctx.font = "bold small-caps 20px Arial";
 ctx.textBaseline = "middle";
-ctx.fillText("r1", 185, 175)
+ctx.fillText("R1", 185, 175)
 
 // resistor 2 naming
 ctx.font = "bold small-caps 20px Arial";
 ctx.textBaseline = "middle";
-ctx.fillText("r2", 185, 300)
+ctx.fillText("R2", 185, 300)
 
 // resistor 3 naming
 ctx.font = "bold small-caps 20px Arial";
@@ -282,38 +359,86 @@ ctx.fillText("_", 440, 260)
 ctx.fillStyle = "black";
 ctx.fillRect(200,200, 1, 1);
 
-// function resistance2Display(res){
-//   let text = `${res} Ω`;
-//   ctx.fillStyle = "white";
-//   ctx.fillRect(715,300,100,25);
-//   ctx.fillStyle = "black";
-//   ctx.font = "small-caps 20px Arial";
-//   ctx.textBaseline = "middle";
-//   ctx.fillText(text, 730, 310)
-//   ctx.fillStyle = "black";
-// }
+//voltage v1
+ctx.font = "bold small-caps 20px Arial";
+ctx.textBaseline = "middle";
+ctx.fillText("V1", 105, 200)
 
-// function resistance1Display(res){
-//   let text = `${res} Ω`;
-//   ctx.fillStyle = "white";
-//   ctx.fillRect(155,90,100,25);
-//   ctx.fillStyle = "black";
-//   ctx.font = "small-caps 20px Arial";
-//   ctx.textBaseline = "middle";
-//   ctx.fillText(text, 158, 100)
-//   ctx.fillStyle = "black";
-// }
+//voltage v2
+ctx.font = "bold small-caps 20px Arial";
+ctx.textBaseline = "middle";
+ctx.fillText("V2", 105, 271)
 
-// function resistancefDisplay(res){
-//   let text = `${res} Ω`;
-//   ctx.fillStyle = "white";
-//   ctx.fillRect(415,300,100,25);
-//   ctx.fillStyle = "black";
-//   ctx.font = "small-caps 20px Arial";
-//   ctx.textBaseline = "middle";
-//   ctx.fillText(text, 418, 310);
-//   ctx.fillStyle = "black";
-// }
+//output voltage
+ctx.font = "bold small-caps 20px Arial";
+ctx.textBaseline = "middle";
+ctx.fillText("Vo", 730, 235)
+
+function voltage1Display(volt){
+  let text = `${volt} V`;
+  ctx.fillStyle = "white";
+  ctx.fillRect(90,210, 90, 30);
+  ctx.fillStyle = "black";
+  ctx.font = "small-caps 20px Arial";
+  ctx.textBaseline = "middle";
+  ctx.fillText(text,100,225)
+  ctx.fillStyle = "black";
+}
+
+function voltage2Display(volt){
+  let text = `${volt} V`;
+  ctx.fillStyle = "white";
+  ctx.fillRect(90,280, 90, 30);
+  ctx.fillStyle = "black";
+  ctx.font = "small-caps 20px Arial";
+  ctx.textBaseline = "middle";
+  ctx.fillText(text,100,295)
+  ctx.fillStyle = "black";
+}
+
+function resistance2Display(res){
+  let text = `= ${res} Ω`;
+  ctx.fillStyle = "white";
+  ctx.fillRect(220,285, 90, 30);
+  ctx.fillStyle = "black";
+  ctx.font = "small-caps 20px Arial";
+  ctx.textBaseline = "middle";
+  ctx.fillText(text,220,300)
+  ctx.fillStyle = "black";
+}
+
+function resistance1Display(res){
+  let text = `= ${res} Ω`;
+  ctx.fillStyle = "white";
+  ctx.fillRect(220,155, 90, 30);
+  ctx.fillStyle = "black";
+  ctx.font = "small-caps 20px Arial";
+  ctx.textBaseline = "middle";
+  ctx.fillText(text,220,175)
+  ctx.fillStyle = "black";
+}
+
+function resistancefDisplay(res){
+  let text = `= ${res} Ω`;
+  ctx.fillStyle = "white";
+  ctx.fillRect(470,55, 90, 30);
+  ctx.fillStyle = "black";
+  ctx.font = "small-caps 20px Arial";
+  ctx.textBaseline = "middle";
+  ctx.fillText(text,470, 75)
+  ctx.fillStyle = "black";
+}
+
+function outputDisplay(volt){
+  let text = `${volt} V`
+  ctx.fillStyle = "white";
+  ctx.fillRect(710,250, 120, 30);
+  ctx.fillStyle = "black";
+  ctx.font = "small-caps 20px Arial";
+  ctx.textBaseline = "middle";
+  ctx.fillText(text,720,260)
+  ctx.fillStyle = "black";
+}
 
 //Initialise system parameters here
 function varinit() {
@@ -336,11 +461,16 @@ function varinit() {
   // $("#CsArea").spinner("value", 0.01);
   // $("#Ivalue").spinner("value", 0.01);
 
-  $('#voltage1Slider').slider("disable"); 
+  $('#voltage1Slider').slider("disable");
+  $("#voltage1Spinner").spinner("disable");
   $('#voltage2Slider').slider("disable"); 
+  $("#voltage2Spinner").spinner("disable");
   $('#resistor1Slider').slider("disable"); 
+  $("#resistor1Spinner").spinner("disable");
   $('#resistor2Slider').slider("disable"); 
+  $("#resistor2Spinner").spinner("disable");
   $('#resistorfSlider').slider("disable"); 
+  $("#resistorfSpinner").spinner("disable");
 
   $("#add-to-table-btn").prop("disabled", true);
   $("#result-btn").prop("disabled", true);
@@ -461,19 +591,24 @@ function varupdate() {
   res2 = $("#resistor2Spinner").spinner("value");
   resf = $("#resistorfSpinner").spinner("value");
 
-  // resistance2Display(res2);
-  // resistance1Display(res1);
-  // resistancefDisplay(resf);
+  resistance2Display(res2);
+  resistance1Display(res1);
+  resistancefDisplay(resf);
+  voltage1Display(volt1);
+  voltage2Display(volt2);
 
   v1Assign(volt1);
   v2Assign(volt2);
+
   let v0 = volt1*(resf/(res2+resf)*(1+ (resf/res1)))-((resf/res1)*volt2)
   // v0Assign(v0);
 
   if (isNaN(v0) || !isFinite(v0)) {
     v0Assign(0)    
+    outputDisplay(0)
   }else{
-    v0Assign(v0);
+    v0Assign(v0.toFixed(2));
+    outputDisplay(v0.toFixed(2))
   }
   resis1Assign(res1);
   resis2Assign(res2);
@@ -490,6 +625,11 @@ function v1Assign(volt) {
 function v2Assign(volt) {
   v2 = volt;
   // console.log(v1);
+}
+
+function v0Assign(volt) {
+  v0 = volt;
+  // console.log("v0",v0);
 }
 
 function resis1Assign(res) {
@@ -518,6 +658,11 @@ function startSimulation(){
   $('#voltage2Slider').slider("enable");
   $('#resistor1Slider').slider("enable"); 
   $('#resistor2Slider').slider("enable"); 
+  $("#voltage1Spinner").spinner("enable");
+  $("#voltage2Spinner").spinner("enable");
+  $("#resistor1Spinner").spinner("enable");
+  $("#resistor2Spinner").spinner("enable");
+  $("#resistorfSpinner").spinner("enable");
   $('#resistorfSlider').slider("enable"); 
   $("#simulate-btn").prop("disabled", true);
   $("#add-to-table-btn").prop("disabled", false);
