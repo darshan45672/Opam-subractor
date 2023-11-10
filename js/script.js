@@ -2,38 +2,38 @@ var v1 = v2 = r1 = r2 = rf = v0 = 0;
 const canvas = document.getElementById("canvas");
 const ctx = canvas.getContext("2d");
 
-function resistance2Display(res){
-  let text = `${res} Ω`;
-  ctx.fillStyle = "white";
-  ctx.fillRect(715,300,100,25);
-  ctx.fillStyle = "black";
-  ctx.font = "small-caps 20px Arial";
-  ctx.textBaseline = "middle";
-  ctx.fillText(text, 730, 310)
-  ctx.fillStyle = "black";
-}
+// function resistance2Display(res){
+//   let text = `${res} Ω`;
+//   ctx.fillStyle = "white";
+//   ctx.fillRect(715,300,100,25);
+//   ctx.fillStyle = "black";
+//   ctx.font = "small-caps 20px Arial";
+//   ctx.textBaseline = "middle";
+//   ctx.fillText(text, 730, 310)
+//   ctx.fillStyle = "black";
+// }
 
-function resistance1Display(res){
-  let text = `${res} Ω`;
-  ctx.fillStyle = "white";
-  ctx.fillRect(155,90,100,25);
-  ctx.fillStyle = "black";
-  ctx.font = "small-caps 20px Arial";
-  ctx.textBaseline = "middle";
-  ctx.fillText(text, 158, 100)
-  ctx.fillStyle = "black";
-}
+// function resistance1Display(res){
+//   let text = `${res} Ω`;
+//   ctx.fillStyle = "white";
+//   ctx.fillRect(155,90,100,25);
+//   ctx.fillStyle = "black";
+//   ctx.font = "small-caps 20px Arial";
+//   ctx.textBaseline = "middle";
+//   ctx.fillText(text, 158, 100)
+//   ctx.fillStyle = "black";
+// }
 
-function resistancefDisplay(res){
-  let text = `${res} Ω`;
-  ctx.fillStyle = "white";
-  ctx.fillRect(415,300,100,25);
-  ctx.fillStyle = "black";
-  ctx.font = "small-caps 20px Arial";
-  ctx.textBaseline = "middle";
-  ctx.fillText(text, 418, 310);
-  ctx.fillStyle = "black";
-}
+// function resistancefDisplay(res){
+//   let text = `${res} Ω`;
+//   ctx.fillStyle = "white";
+//   ctx.fillRect(415,300,100,25);
+//   ctx.fillStyle = "black";
+//   ctx.font = "small-caps 20px Arial";
+//   ctx.textBaseline = "middle";
+//   ctx.fillText(text, 418, 310);
+//   ctx.fillStyle = "black";
+// }
 
 //Initialise system parameters here
 function varinit() {
@@ -181,13 +181,13 @@ function varupdate() {
   res2 = $("#resistor2Spinner").spinner("value");
   resf = $("#resistorfSpinner").spinner("value");
 
-  resistance2Display(res2);
-  resistance1Display(res1);
-  resistancefDisplay(resf);
+  // resistance2Display(res2);
+  // resistance1Display(res1);
+  // resistancefDisplay(resf);
 
   v1Assign(volt1);
   v2Assign(volt2);
-  let v0 = ((resf*volt1/res1)+(resf*volt2/res2));
+  let v0 = volt1*(resf/(res2+resf)*(1+ (resf/res1)))-((resf/res1)*volt2)
   // v0Assign(v0);
 
   if (isNaN(v0) || !isFinite(v0)) {
