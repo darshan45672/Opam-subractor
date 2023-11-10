@@ -2,38 +2,443 @@ var v1 = v2 = r1 = r2 = rf = v0 = 0;
 const canvas = document.getElementById("canvas");
 const ctx = canvas.getContext("2d");
 
-// function resistance2Display(res){
-//   let text = `${res} Ω`;
-//   ctx.fillStyle = "white";
-//   ctx.fillRect(715,300,100,25);
-//   ctx.fillStyle = "black";
-//   ctx.font = "small-caps 20px Arial";
-//   ctx.textBaseline = "middle";
-//   ctx.fillText(text, 730, 310)
-//   ctx.fillStyle = "black";
-// }
+ctx.strokeStyle = "red";
+ctx.lineWidth = 2;
 
-// function resistance1Display(res){
-//   let text = `${res} Ω`;
-//   ctx.fillStyle = "white";
-//   ctx.fillRect(155,90,100,25);
-//   ctx.fillStyle = "black";
-//   ctx.font = "small-caps 20px Arial";
-//   ctx.textBaseline = "middle";
-//   ctx.fillText(text, 158, 100)
-//   ctx.fillStyle = "black";
-// }
 
-// function resistancefDisplay(res){
-//   let text = `${res} Ω`;
-//   ctx.fillStyle = "white";
-//   ctx.fillRect(415,300,100,25);
-//   ctx.fillStyle = "black";
-//   ctx.font = "small-caps 20px Arial";
-//   ctx.textBaseline = "middle";
-//   ctx.fillText(text, 418, 310);
-//   ctx.fillStyle = "black";
-// }
+ctx.beginPath();
+ctx.moveTo(540, 235);
+ctx.lineTo(430, 295);
+ctx.stroke();
+
+ctx.beginPath();
+ctx.moveTo(540, 235);
+ctx.lineTo(430, 175);
+ctx.stroke();
+
+ctx.beginPath();
+ctx.moveTo(430, 175);
+ctx.lineTo(430, 295);
+ctx.stroke();
+
+//horizontal
+ctx.beginPath();
+ctx.moveTo(250, 200);
+ctx.lineTo(430, 200);
+ctx.stroke();
+
+ctx.beginPath();
+ctx.moveTo(540, 235);
+ctx.lineTo(710, 235);
+ctx.stroke();
+
+ctx.beginPath();
+ctx.moveTo(250, 270);
+ctx.lineTo(430, 270);
+ctx.stroke();
+
+ctx.beginPath();
+ctx.moveTo(490, 100);
+ctx.lineTo(600, 100);
+ctx.stroke();
+
+ctx.beginPath();
+ctx.moveTo(420, 100);
+ctx.lineTo(360, 100);
+ctx.stroke();
+
+ctx.beginPath();  
+ctx.moveTo(140, 270);
+ctx.lineTo(180, 270);
+ctx.stroke();
+
+ctx.beginPath();  
+ctx.moveTo(140, 200);
+ctx.lineTo(180, 200);
+ctx.stroke();
+
+ctx.strokeStyle = "black";
+//opamp
+ctx.beginPath();
+ctx.moveTo(540, 235);
+ctx.lineTo(430, 295);
+ctx.stroke();
+
+ctx.beginPath();
+ctx.moveTo(540, 235);
+ctx.lineTo(430, 175);
+ctx.stroke();
+
+ctx.beginPath();
+ctx.moveTo(430, 175);
+ctx.lineTo(430, 295);
+ctx.stroke();
+
+ctx.strokeStyle = "red";
+//vertical
+
+ctx.beginPath();
+ctx.moveTo(360, 100);
+ctx.lineTo(360, 200);
+ctx.stroke();
+
+ctx.beginPath();
+ctx.moveTo(600, 100);
+ctx.lineTo(600, 235);
+ctx.stroke();
+
+ctx.beginPath();
+ctx.moveTo(369, 270);
+ctx.lineTo(369, 309);
+ctx.stroke();
+
+ctx.beginPath();
+ctx.moveTo(369, 385);
+ctx.lineTo(369, 425);
+ctx.stroke();
+
+ctx.strokeStyle = "black";
+//resistor1
+
+ctx.beginPath();
+ctx.moveTo(180, 201);
+ctx.lineTo(190,188);
+ctx.stroke();
+
+ctx.beginPath();
+ctx.moveTo(190, 188);
+ctx.lineTo(200,212);
+ctx.stroke();
+
+ctx.beginPath();
+ctx.moveTo(200, 212);
+ctx.lineTo(210,188);
+ctx.stroke();
+
+ctx.beginPath();
+ctx.moveTo(210, 188);
+ctx.lineTo(220,212);
+ctx.stroke();
+
+ctx.beginPath();
+ctx.moveTo(220, 212);
+ctx.lineTo(230,188);
+ctx.stroke();
+
+ctx.beginPath();
+ctx.moveTo(230, 188);
+ctx.lineTo(240,212);
+ctx.stroke();
+
+ctx.beginPath();
+ctx.moveTo(240, 212);
+ctx.lineTo(250,200);
+ctx.stroke();
+
+//resistor2
+
+ctx.beginPath();
+ctx.moveTo(180, 271);
+ctx.lineTo(190,258);
+ctx.stroke();
+
+ctx.beginPath();
+ctx.moveTo(190, 258);
+ctx.lineTo(200,282);
+ctx.stroke();
+
+ctx.beginPath();
+ctx.moveTo(200, 282);
+ctx.lineTo(210,258);
+ctx.stroke();
+
+ctx.beginPath();
+ctx.moveTo(210, 258);
+ctx.lineTo(220,282);
+ctx.stroke();
+
+ctx.beginPath();
+ctx.moveTo(220, 282);
+ctx.lineTo(230,258);
+ctx.stroke();
+
+ctx.beginPath();
+ctx.moveTo(230, 258);
+ctx.lineTo(240,282);
+ctx.stroke();
+
+ctx.beginPath();
+ctx.moveTo(240, 282);
+ctx.lineTo(250,270);
+ctx.stroke();
+
+//resistor3
+
+ctx.beginPath();
+ctx.moveTo(420, 101);
+ctx.lineTo(430,88);
+ctx.stroke();
+
+ctx.beginPath();
+ctx.moveTo(430, 88);
+ctx.lineTo(440,112);
+ctx.stroke();
+
+ctx.beginPath();
+ctx.moveTo(440, 112);
+ctx.lineTo(450,88);
+ctx.stroke();
+
+ctx.beginPath();
+ctx.moveTo(450, 88);
+ctx.lineTo(460,112);
+ctx.stroke();
+
+ctx.beginPath();
+ctx.moveTo(460, 112);
+ctx.lineTo(470,88);
+ctx.stroke();
+
+ctx.beginPath();
+ctx.moveTo(470, 88);
+ctx.lineTo(480,112);
+ctx.stroke();
+
+ctx.beginPath();
+ctx.moveTo(480, 112);
+ctx.lineTo(490,100);
+ctx.stroke();
+
+//resistor4
+      
+ctx.beginPath();
+ctx.moveTo(360, 380);
+ctx.lineTo(370, 386);
+ctx.stroke();
+
+ctx.beginPath();
+ctx.moveTo(360, 380);
+ctx.lineTo(380, 368);
+ctx.stroke();
+      
+ctx.beginPath();
+ctx.moveTo(380, 368);
+ctx.lineTo(360, 356);
+ctx.stroke();
+
+ctx.beginPath();
+ctx.moveTo(360, 356);
+ctx.lineTo(380, 342);
+ctx.stroke();
+      
+ctx.beginPath();
+ctx.moveTo(380, 342);
+ctx.lineTo(360, 330);
+ctx.stroke();
+      
+ctx.beginPath();
+ctx.moveTo(360, 330);
+ctx.lineTo(380, 318);
+ctx.stroke();
+      
+ctx.beginPath();
+ctx.moveTo(380, 318);
+ctx.lineTo(368, 308);
+ctx.stroke();
+
+//ground
+ctx.beginPath();  
+ctx.moveTo(385, 450);
+ctx.lineTo(355, 450);
+ctx.stroke();
+      
+ctx.beginPath();
+ctx.moveTo(380, 455);
+ctx.lineTo(360, 455);
+ctx.stroke();
+      
+ctx.beginPath();
+ctx.moveTo(375, 460);
+ctx.lineTo(365, 460);
+ctx.stroke();
+
+ctx.beginPath();
+ctx.moveTo(369, 385);
+ctx.lineTo(369, 450);
+ctx.stroke();
+//ground 2
+
+ctx.beginPath();
+ctx.moveTo(715, 294);
+ctx.lineTo(715, 345);
+ctx.stroke();
+
+ctx.beginPath();  
+ctx.moveTo(700, 345);
+ctx.lineTo(730, 345);
+ctx.stroke();
+      
+ctx.beginPath();
+ctx.moveTo(705, 350);
+ctx.lineTo(725, 350);
+ctx.stroke();
+      
+ctx.beginPath();
+ctx.moveTo(710, 355);
+ctx.lineTo(720, 355);
+ctx.stroke();
+
+
+//dots
+ctx.beginPath();
+ctx.arc(137, 200, 5, 0, 2 * Math.PI);
+ctx.fillStyle = 'black'; 
+ctx.fill();
+
+ctx.beginPath();
+ctx.arc(137, 270, 5, 0, 2 * Math.PI);
+ctx.fillStyle = 'black'; 
+ctx.fill();
+
+ctx.beginPath();
+ctx.arc(369, 270, 5, 0, 2 * Math.PI);
+ctx.fillStyle = 'black'; 
+ctx.fill();
+
+ctx.beginPath();
+ctx.arc(360, 200, 5, 0, 2 * Math.PI);
+ctx.fillStyle = 'black'; 
+ctx.fill();
+
+ctx.beginPath();
+ctx.arc(715, 235, 5, 0, 2 * Math.PI);
+ctx.fillStyle = 'black'; 
+ctx.stroke();
+
+ctx.beginPath();
+ctx.arc(600, 235, 5, 0, 2 * Math.PI);
+ctx.fillStyle = 'black'; 
+ctx.fill();
+
+ctx.beginPath();
+ctx.arc(715, 290, 5, 0, 2 * Math.PI);
+ctx.fillStyle = 'black'; 
+ctx.stroke();
+
+
+// resistor 1 naming
+ctx.font = "bold small-caps 20px Arial";
+ctx.textBaseline = "middle";
+ctx.fillText("R1", 185, 175)
+
+// resistor 2 naming
+ctx.font = "bold small-caps 20px Arial";
+ctx.textBaseline = "middle";
+ctx.fillText("R2", 185, 300)
+
+// resistor 3 naming
+ctx.font = "bold small-caps 20px Arial";
+ctx.textBaseline = "middle";
+ctx.fillText("Rf", 435, 75)
+
+// resistor 4 naming
+ctx.font = "bold small-caps 20px Arial";
+ctx.textBaseline = "middle";
+ctx.fillText("R3", 400, 345)
+
+//positive naming
+ctx.font = "bold small-caps 20px Arial";
+ctx.textBaseline = "middle";
+ctx.fillText("+", 435, 200)
+
+//negative naming
+ctx.font = "bold small-caps 20px Arial";
+ctx.textBaseline = "middle";
+ctx.fillText("_", 440, 260)
+
+ctx.fillStyle = "black";
+ctx.fillRect(200,200, 1, 1);
+
+//voltage v1
+ctx.font = "bold small-caps 20px Arial";
+ctx.textBaseline = "middle";
+ctx.fillText("V1", 105, 200)
+
+//voltage v2
+ctx.font = "bold small-caps 20px Arial";
+ctx.textBaseline = "middle";
+ctx.fillText("V2", 105, 271)
+
+//output voltage
+ctx.font = "bold small-caps 20px Arial";
+ctx.textBaseline = "middle";
+ctx.fillText("Vo", 730, 235)
+
+function voltage1Display(volt){
+  let text = `${volt} V`;
+  ctx.fillStyle = "white";
+  ctx.fillRect(90,210, 90, 30);
+  ctx.fillStyle = "black";
+  ctx.font = "small-caps 20px Arial";
+  ctx.textBaseline = "middle";
+  ctx.fillText(text,100,225)
+  ctx.fillStyle = "black";
+}
+
+function voltage2Display(volt){
+  let text = `${volt} V`;
+  ctx.fillStyle = "white";
+  ctx.fillRect(90,280, 90, 30);
+  ctx.fillStyle = "black";
+  ctx.font = "small-caps 20px Arial";
+  ctx.textBaseline = "middle";
+  ctx.fillText(text,100,295)
+  ctx.fillStyle = "black";
+}
+
+function resistance2Display(res){
+  let text = `= ${res} Ω`;
+  ctx.fillStyle = "white";
+  ctx.fillRect(220,285, 90, 30);
+  ctx.fillStyle = "black";
+  ctx.font = "small-caps 20px Arial";
+  ctx.textBaseline = "middle";
+  ctx.fillText(text,220,300)
+  ctx.fillStyle = "black";
+}
+
+function resistance1Display(res){
+  let text = `= ${res} Ω`;
+  ctx.fillStyle = "white";
+  ctx.fillRect(220,155, 90, 30);
+  ctx.fillStyle = "black";
+  ctx.font = "small-caps 20px Arial";
+  ctx.textBaseline = "middle";
+  ctx.fillText(text,220,175)
+  ctx.fillStyle = "black";
+}
+
+function resistancefDisplay(res){
+  let text = `= ${res} Ω`;
+  ctx.fillStyle = "white";
+  ctx.fillRect(470,55, 90, 30);
+  ctx.fillStyle = "black";
+  ctx.font = "small-caps 20px Arial";
+  ctx.textBaseline = "middle";
+  ctx.fillText(text,470, 75)
+  ctx.fillStyle = "black";
+}
+
+function outputDisplay(volt){
+  let text = `${volt} V`
+  ctx.fillStyle = "white";
+  ctx.fillRect(710,250, 120, 30);
+  ctx.fillStyle = "black";
+  ctx.font = "small-caps 20px Arial";
+  ctx.textBaseline = "middle";
+  ctx.fillText(text,720,260)
+  ctx.fillStyle = "black";
+}
 
 //Initialise system parameters here
 function varinit() {
@@ -56,11 +461,16 @@ function varinit() {
   // $("#CsArea").spinner("value", 0.01);
   // $("#Ivalue").spinner("value", 0.01);
 
-  $('#voltage1Slider').slider("disable"); 
+  $('#voltage1Slider').slider("disable");
+  $("#voltage1Spinner").spinner("disable");
   $('#voltage2Slider').slider("disable"); 
+  $("#voltage2Spinner").spinner("disable");
   $('#resistor1Slider').slider("disable"); 
+  $("#resistor1Spinner").spinner("disable");
   $('#resistor2Slider').slider("disable"); 
+  $("#resistor2Spinner").spinner("disable");
   $('#resistorfSlider').slider("disable"); 
+  $("#resistorfSpinner").spinner("disable");
 
   $("#add-to-table-btn").prop("disabled", true);
   $("#result-btn").prop("disabled", true);
@@ -181,19 +591,24 @@ function varupdate() {
   res2 = $("#resistor2Spinner").spinner("value");
   resf = $("#resistorfSpinner").spinner("value");
 
-  // resistance2Display(res2);
-  // resistance1Display(res1);
-  // resistancefDisplay(resf);
+  resistance2Display(res2);
+  resistance1Display(res1);
+  resistancefDisplay(resf);
+  voltage1Display(volt1);
+  voltage2Display(volt2);
 
   v1Assign(volt1);
   v2Assign(volt2);
+
   let v0 = volt1*(resf/(res2+resf)*(1+ (resf/res1)))-((resf/res1)*volt2)
   // v0Assign(v0);
 
   if (isNaN(v0) || !isFinite(v0)) {
     v0Assign(0)    
+    outputDisplay(0)
   }else{
-    v0Assign(v0);
+    v0Assign(v0.toFixed(2));
+    outputDisplay(v0.toFixed(2))
   }
   resis1Assign(res1);
   resis2Assign(res2);
@@ -210,6 +625,11 @@ function v1Assign(volt) {
 function v2Assign(volt) {
   v2 = volt;
   // console.log(v1);
+}
+
+function v0Assign(volt) {
+  v0 = volt;
+  // console.log("v0",v0);
 }
 
 function resis1Assign(res) {
@@ -238,6 +658,11 @@ function startSimulation(){
   $('#voltage2Slider').slider("enable");
   $('#resistor1Slider').slider("enable"); 
   $('#resistor2Slider').slider("enable"); 
+  $("#voltage1Spinner").spinner("enable");
+  $("#voltage2Spinner").spinner("enable");
+  $("#resistor1Spinner").spinner("enable");
+  $("#resistor2Spinner").spinner("enable");
+  $("#resistorfSpinner").spinner("enable");
   $('#resistorfSlider').slider("enable"); 
   $("#simulate-btn").prop("disabled", true);
   $("#add-to-table-btn").prop("disabled", false);
