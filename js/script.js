@@ -432,11 +432,11 @@ function resistancefDisplay(res){
 function outputDisplay(volt){
   let text = `${volt} V`
   ctx.fillStyle = "white";
-  ctx.fillRect(710,250, 120, 30);
+  ctx.fillRect(700,250, 150, 30);
   ctx.fillStyle = "black";
   ctx.font = "small-caps 20px Arial";
   ctx.textBaseline = "middle";
-  ctx.fillText(text,720,260)
+  ctx.fillText(text,710,260)
   ctx.fillStyle = "black";
 }
 
@@ -474,7 +474,6 @@ function varinit() {
 
   $("#add-to-table-btn").prop("disabled", true);
   $("#result-btn").prop("disabled", true);
-  
 }
 
 function varchange() {
@@ -667,6 +666,13 @@ function startSimulation(){
   $("#simulate-btn").prop("disabled", true);
   $("#add-to-table-btn").prop("disabled", false);
   $("#result-btn").prop("disabled", false);
+
+  resistance2Display(0);
+  resistance1Display(0);
+  resistancefDisplay(0);
+  voltage1Display(0);
+  voltage2Display(0);
+  outputDisplay(0);
 };
 
 function addtable(){
